@@ -1,58 +1,13 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { insertContactSchema } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
-import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import type { z } from "zod";
-
-type ContactFormData = z.infer<typeof insertContactSchema>;
 
 export default function ContactSection() {
-  const { toast } = useToast();
-  const queryClient = useQueryClient();
-  
-  const form = useForm<ContactFormData>({
-    resolver: zodResolver(insertContactSchema),
-    defaultValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      subject: "",
-      message: ""
-    }
-  });
-
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormData) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      form.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/contacts"] });
-    },
-    onError: (error) => {
-      console.error("Contact form error:", error);
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
-
-  const onSubmit = (data: ContactFormData) => {
-    contactMutation.mutate(data);
+  const handleEmailClick = () => {
+    const email = "ericwang8@outlook.com";
+    const subject = "Project Inquiry - Portfolio Contact";
+    const body = "Hi Eric,\n\nI saw your portfolio and would like to discuss a potential project opportunity.\n\nBest regards,";
+    
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
   };
 
   return (
@@ -122,91 +77,34 @@ export default function ContactSection() {
             </div>
           </div>
           
-          {/* Contact Form */}
+          {/* Contact Options */}
           <div className="bg-card rounded-2xl p-8 shadow-lg border border-border fade-in-up">
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-testid="contact-form">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">First Name</Label>
-                  <Input 
-                    id="firstName" 
-                    {...form.register("firstName")}
-                    className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-all" 
-                    placeholder="John"
-                    data-testid="input-first-name"
-                  />
-                  {form.formState.errors.firstName && (
-                    <p className="text-destructive text-sm mt-1">{form.formState.errors.firstName.message}</p>
-                  )}
-                </div>
-                <div>
-                  <Label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-2">Last Name</Label>
-                  <Input 
-                    id="lastName" 
-                    {...form.register("lastName")}
-                    className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-all" 
-                    placeholder="Doe"
-                    data-testid="input-last-name"
-                  />
-                  {form.formState.errors.lastName && (
-                    <p className="text-destructive text-sm mt-1">{form.formState.errors.lastName.message}</p>
-                  )}
-                </div>
-              </div>
-              
-              <div>
-                <Label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">Email</Label>
-                <Input 
-                  type="email" 
-                  id="email" 
-                  {...form.register("email")}
-                  className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-all" 
-                  placeholder="john@example.com"
-                  data-testid="input-email"
-                />
-                {form.formState.errors.email && (
-                  <p className="text-destructive text-sm mt-1">{form.formState.errors.email.message}</p>
-                )}
-              </div>
-              
-              <div>
-                <Label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">Subject</Label>
-                <Input 
-                  id="subject" 
-                  {...form.register("subject")}
-                  className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-all" 
-                  placeholder="Project Inquiry"
-                  data-testid="input-subject"
-                />
-                {form.formState.errors.subject && (
-                  <p className="text-destructive text-sm mt-1">{form.formState.errors.subject.message}</p>
-                )}
-              </div>
-              
-              <div>
-                <Label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">Message</Label>
-                <Textarea 
-                  id="message" 
-                  {...form.register("message")}
-                  rows={5}
-                  className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-all resize-none" 
-                  placeholder="Tell me about your project..."
-                  data-testid="input-message"
-                />
-                {form.formState.errors.message && (
-                  <p className="text-destructive text-sm mt-1">{form.formState.errors.message.message}</p>
-                )}
-              </div>
-              
+            <h3 className="text-2xl font-semibold text-primary mb-6 text-center">Ready to Work Together?</h3>
+            <p className="text-muted-foreground text-center mb-8 leading-relaxed">
+              I'm always excited to discuss new opportunities and projects. Click below to send me an email with your project details.
+            </p>
+            
+            <div className="space-y-4">
               <Button 
-                type="submit" 
-                disabled={contactMutation.isPending}
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold transition-all hover-lift"
-                data-testid="button-send-message"
+                onClick={handleEmailClick}
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold transition-all hover-lift text-lg"
+                data-testid="button-send-email"
               >
-                {contactMutation.isPending ? "Sending..." : "Send Message"}
+                <i className="fas fa-envelope mr-3"></i>
+                Send Me an Email
               </Button>
-            </form>
+              
+              <div className="text-center text-muted-foreground">
+                <p className="text-sm">or reach out directly at</p>
+                <a 
+                  href="mailto:ericwang8@outlook.com" 
+                  className="text-primary hover:text-primary/80 font-medium transition-colors"
+                  data-testid="email-direct-link"
+                >
+                  ericwang8@outlook.com
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
