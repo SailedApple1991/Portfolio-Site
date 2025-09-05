@@ -17,5 +17,5 @@ export default defineConfig({
     emptyOutDir: true,
   },
   // GitHub Pages specific configuration
-  base: process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/` : '/',
+  base: '/Portfolio-Site/',
 });
