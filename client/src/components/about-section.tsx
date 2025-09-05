@@ -1,3 +1,5 @@
+import profileImage from "@assets/undefined_help_me_to_generate__1757047162777.png";
+
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 bg-muted/30">
@@ -10,8 +12,8 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="fade-in-up">
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600" 
-              alt="Professional headshot" 
+              src={profileImage} 
+              alt="Eric (Chaojie) Wang - Professional headshot" 
               className="rounded-2xl shadow-2xl w-full max-w-lg mx-auto hover-lift" 
               data-testid="about-image"
             />
