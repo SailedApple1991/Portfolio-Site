@@ -45,7 +45,7 @@ export default function AboutSection() {
             
             <div className="mt-8 grid grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-secondary" data-testid="stat-projects">100+</div>
+                <div className="text-3xl font-bold text-secondary" data-testid="stat-projects">20+</div>
                 <div className="text-sm text-muted-foreground">Projects Delivered</div>
               </div>
               <div className="text-center">
