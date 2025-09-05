@@ -1,23 +1,18 @@
-import { Switch, Route, Router as WouterRouter } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
-import NotFound from "@/pages/not-found";
 
-// GitHub Pages base path configuration
-const basePath = import.meta.env.PROD ? "/Portfolio-Site" : "";
-
+// For GitHub Pages, we'll use a simpler approach: 
+// Just render the Home component directly since this is a single-page portfolio
 function Router() {
-  return (
-    <WouterRouter base={basePath}>
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route component={NotFound} />
-      </Switch>
-    </WouterRouter>
-  );
+  // Debug logging for production troubleshooting
+  console.log("Current location:", window.location.pathname);
+  console.log("Environment:", import.meta.env.PROD ? "production" : "development");
+  
+  // Always render Home component - this is a single-page portfolio
+  return <Home />;
 }
 
 function App() {
