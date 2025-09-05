@@ -19,12 +19,12 @@ export default function HeroSection() {
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
-            <span className="block text-primary" data-testid="hero-name">Alex Thompson</span>
-            <span className="block gradient-text mt-2" data-testid="hero-title">Full Stack Developer</span>
+            <span className="block text-primary" data-testid="hero-name">Eric (Chaojie) Wang</span>
+            <span className="block gradient-text mt-2" data-testid="hero-title">Senior Full Stack Developer</span>
           </h1>
           
           <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed" data-testid="hero-description">
-            Creating exceptional digital experiences through clean code, thoughtful design, and innovative solutions.
+Results-driven full-stack developer with over 7 years of experience in creating dynamic web applications and optimizing user experiences.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -44,13 +44,13 @@ export default function HeroSection() {
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-2xl" data-testid="link-github">
               <i className="fab fa-github"></i>
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-2xl" data-testid="link-linkedin">
+            <a href="https://linkedin.com/in/eric-chaojie-wang-903117112/" className="text-muted-foreground hover:text-primary transition-colors text-2xl" data-testid="link-linkedin">
               <i className="fab fa-linkedin"></i>
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-2xl" data-testid="link-twitter">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-2xl" data-testid="link-email">
+            <a href="mailto:ericwang8@outlook.com" className="text-muted-foreground hover:text-primary transition-colors text-2xl" data-testid="link-email">
               <i className="fas fa-envelope"></i>
             </a>
           </div>

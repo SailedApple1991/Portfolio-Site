@@ -15,10 +15,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4" data-testid="footer-name">Alex Thompson</h3>
+            <h3 className="text-2xl font-bold mb-4" data-testid="footer-name">Eric (Chaojie) Wang</h3>
             <p className="text-primary-foreground/80 leading-relaxed" data-testid="footer-description">
-              Full Stack Developer passionate about creating innovative digital experiences 
-              and solving complex problems through code.
+Senior Full Stack Developer with 7+ years of experience creating scalable web applications 
+              and optimizing user experiences across multiple industries.
             </p>
           </div>
           
@@ -39,13 +39,13 @@ export default function Footer() {
               <a href="#" className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-all" data-testid="footer-social-github">
                 <i className="fab fa-github"></i>
               </a>
-              <a href="#" className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-all" data-testid="footer-social-linkedin">
+              <a href="https://linkedin.com/in/eric-chaojie-wang-903117112/" className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-all" data-testid="footer-social-linkedin">
                 <i className="fab fa-linkedin"></i>
               </a>
               <a href="#" className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-all" data-testid="footer-social-twitter">
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="#" className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-all" data-testid="footer-social-email">
+              <a href="mailto:ericwang8@outlook.com" className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-all" data-testid="footer-social-email">
                 <i className="fas fa-envelope"></i>
               </a>
             </div>
@@ -59,7 +59,7 @@ export default function Footer() {
         
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60" data-testid="footer-copyright">
-            © 2024 Alex Thompson. All rights reserved. Built with ❤️ and code.
+            © 2024 Eric (Chaojie) Wang. All rights reserved. Built with ❤️ and code.
           </p>
         </div>
       </div>

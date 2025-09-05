@@ -78,7 +78,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
-                  <div className="text-foreground font-medium" data-testid="contact-email">alex@example.com</div>
+                  <div className="text-foreground font-medium" data-testid="contact-email">ericwang8@outlook.com</div>
                 </div>
               </div>
               
@@ -88,7 +88,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Phone</div>
-                  <div className="text-foreground font-medium" data-testid="contact-phone">+1 (555) 123-4567</div>
+                  <div className="text-foreground font-medium" data-testid="contact-phone">+1 (240) 810-5541</div>
                 </div>
               </div>
               
@@ -98,7 +98,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Location</div>
-                  <div className="text-foreground font-medium" data-testid="contact-location">San Francisco, CA</div>
+                  <div className="text-foreground font-medium" data-testid="contact-location">Los Angeles, CA</div>
                 </div>
               </div>
             </div>
@@ -109,7 +109,7 @@ export default function ContactSection() {
                 <a href="#" className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all" data-testid="social-github">
                   <i className="fab fa-github"></i>
                 </a>
-                <a href="#" className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all" data-testid="social-linkedin">
+                <a href="https://linkedin.com/in/eric-chaojie-wang-903117112/" className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all" data-testid="social-linkedin">
                   <i className="fab fa-linkedin"></i>
                 </a>
                 <a href="#" className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all" data-testid="social-twitter">

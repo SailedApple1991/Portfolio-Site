@@ -19,39 +19,40 @@ export default function AboutSection() {
           
           <div className="fade-in-up">
             <h3 className="text-2xl font-semibold text-primary mb-6" data-testid="about-subtitle">
-              Passionate Developer & Problem Solver
+7+ Years of Full-Stack Excellence
             </h3>
             
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p data-testid="about-paragraph-1">
-                With over 5 years of experience in full-stack development, I specialize in creating 
-                scalable web applications using modern technologies like React, Node.js, and TypeScript.
+                With over 7 years of experience in full-stack development, I specialize in React, Angular, 
+                Node.js, .NET, Python and cloud technologies. I've established CI/CD pipelines and enhanced 
+                application security, resulting in significant improvements in user engagement.
               </p>
               
               <p data-testid="about-paragraph-2">
-                My journey began with a Computer Science degree from Stanford University, and since then, 
-                I've had the privilege of working with startups and Fortune 500 companies to bring 
-                innovative digital solutions to life.
+                I hold dual Bachelor's degrees in Computer Science and Electrical Engineering, plus a 
+                Master's in Computer Science from University at Buffalo. I've worked with companies like 
+                REI Systems and Ellucian, and currently own CADayToday.com.
               </p>
               
               <p data-testid="about-paragraph-3">
-                When I'm not coding, you'll find me contributing to open-source projects, mentoring 
-                junior developers, or exploring the latest trends in web technology and design.
+                Most notably, I've engineered responsive interfaces that led to 30% increase in user 
+                interaction and reduced software rework by 40% through comprehensive test automation.
               </p>
             </div>
             
             <div className="mt-8 grid grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-secondary" data-testid="stat-projects">50+</div>
-                <div className="text-sm text-muted-foreground">Projects Completed</div>
+                <div className="text-3xl font-bold text-secondary" data-testid="stat-projects">100+</div>
+                <div className="text-sm text-muted-foreground">Projects Delivered</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-secondary" data-testid="stat-experience">5+</div>
+                <div className="text-3xl font-bold text-secondary" data-testid="stat-experience">7+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-secondary" data-testid="stat-clients">20+</div>
-                <div className="text-sm text-muted-foreground">Happy Clients</div>
+                <div className="text-3xl font-bold text-secondary" data-testid="stat-clients">40%</div>
+                <div className="text-sm text-muted-foreground">Reduced Rework</div>
               </div>
             </div>
           </div>

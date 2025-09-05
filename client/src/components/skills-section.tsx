@@ -4,25 +4,25 @@ export default function SkillsSection() {
       icon: "fab fa-react",
       title: "Frontend",
       color: "secondary",
-      skills: ["React & Next.js", "TypeScript", "Tailwind CSS", "Vue.js"]
+      skills: ["React & Next.js", "Angular 8+", "TypeScript", "Vue.js"]
     },
     {
       icon: "fas fa-server",
       title: "Backend", 
       color: "accent",
-      skills: ["Node.js & Express", "Python & Django", "PostgreSQL", "MongoDB"]
+      skills: [".NET Core & C#", "Node.js & Express", "Python", "ASP.NET MVC"]
+    },
+    {
+      icon: "fas fa-database",
+      title: "Database",
+      color: "primary", 
+      skills: ["PostgreSQL", "MySQL", "MongoDB", "SQLServer"]
     },
     {
       icon: "fas fa-cloud",
-      title: "DevOps",
-      color: "primary", 
-      skills: ["AWS & Azure", "Docker", "CI/CD Pipelines", "Kubernetes"]
-    },
-    {
-      icon: "fas fa-tools",
-      title: "Tools",
+      title: "Cloud & DevOps",
       color: "destructive",
-      skills: ["Git & GitHub", "VS Code", "Figma", "Postman"]
+      skills: ["AWS & Azure", "Docker & Kubernetes", "CI/CD Pipelines", "Jenkins"]
     }
   ];
 

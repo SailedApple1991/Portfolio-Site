@@ -1,48 +1,45 @@
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React, Node.js, and Stripe integration. Features include user authentication, payment processing, and admin dashboard.",
+      title: "CADayToday.com",
+      description: "A comprehensive deals aggregation platform that collects nationwide deals from 10+ websites. Features real-time comment system, user points reward system, and optimized SEO ranking. Enhanced user engagement by 30% through responsive design.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"]
+      technologies: ["Next.js", "React", "TypeScript", "Node.js"]
     },
     {
-      title: "Task Management App", 
-      description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features. Built with modern web technologies.",
+      title: "Grants Management System", 
+      description: "Web-enabled Grants Management and Performance Reporting applications at REI Systems. Designed responsive interfaces using Angular and .NET Core, resulting in 30% increase in user interaction and 25% improvement in operational efficiency.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      technologies: ["Vue.js", "Express", "Socket.io", "PostgreSQL"]
+      technologies: ["Angular", ".NET Core", "MySQL", "Azure"]
     },
     {
-      title: "Analytics Dashboard",
-      description: "A comprehensive data visualization platform that transforms complex datasets into intuitive charts and insights. Features real-time data processing and interactive visualizations.",
+      title: "CRM Platform Enhancement",
+      description: "Developed innovative solutions for Ellucian's CRM platform using ASP.NET and SQL Server. Created versatile Web APIs and RESTful services, significantly enhancing college recruitment processes and user experience.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      technologies: ["React", "D3.js", "Python", "FastAPI"]
+      technologies: ["ASP.NET", "SQL Server", "React", ".NET Core"]
     },
     {
-      title: "Social Network App",
-      description: "A cross-platform social networking application with real-time messaging, media sharing, and advanced privacy controls. Built with React Native for mobile and web.",
+      title: "Data Aggregation System",
+      description: "Developed asynchronous, multi-threaded web scrapers using Node.js, TypeScript, Docker, and Kubernetes. Streamlined data collection processes and reduced data aggregation time through efficient large-scale data ingestion.",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      technologies: ["React Native", "Firebase", "GraphQL", "AWS"]
+      technologies: ["Node.js", "TypeScript", "Docker", "Kubernetes"]
     }
   ];
 
   const getTechColor = (tech: string) => {
     const colors = {
+      'Next.js': 'secondary',
       'React': 'secondary',
-      'Node.js': 'accent', 
-      'MongoDB': 'primary',
-      'Stripe': 'destructive',
-      'Vue.js': 'secondary',
-      'Express': 'accent',
-      'Socket.io': 'primary',
-      'PostgreSQL': 'destructive',
-      'D3.js': 'accent',
-      'Python': 'primary',
-      'FastAPI': 'destructive',
-      'React Native': 'secondary',
-      'Firebase': 'accent',
-      'GraphQL': 'primary',
-      'AWS': 'destructive'
+      'TypeScript': 'accent', 
+      'Node.js': 'accent',
+      'Angular': 'primary',
+      '.NET Core': 'destructive',
+      'MySQL': 'primary',
+      'Azure': 'accent',
+      'ASP.NET': 'destructive',
+      'SQL Server': 'primary',
+      'Docker': 'secondary',
+      'Kubernetes': 'accent'
     };
     return colors[tech as keyof typeof colors] || 'secondary';
   };
