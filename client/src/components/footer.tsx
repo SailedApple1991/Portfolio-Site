@@ -59,7 +59,7 @@ Senior Full Stack Developer with 7+ years of experience creating scalable web ap
         
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60" data-testid="footer-copyright">
-            © 2024 Eric (Chaojie) Wang. All rights reserved. Built with ❤️ and code.
+            © 2025 Eric (Chaojie) Wang. All rights reserved. Built with ❤️ and code.
           </p>
         </div>
       </div>
