@@ -35,9 +35,14 @@ Results-driven full-stack developer with over 7 years of experience in creating 
             >
               View My Work
             </button>
-            <button className="border border-border text-foreground hover:bg-muted px-8 py-4 rounded-lg font-semibold transition-all hover-lift" data-testid="button-download-resume">
+            <a 
+              href="/Chaojie-Wang-Resume.pdf" 
+              download="Chaojie-Wang-Senior-Fullstack-Engineer-Resume.pdf"
+              className="border border-border text-foreground hover:bg-muted px-8 py-4 rounded-lg font-semibold transition-all hover-lift inline-block text-center" 
+              data-testid="button-download-resume"
+            >
               Download Resume
-            </button>
+            </a>
           </div>
           
           <div className="flex justify-center space-x-6">
