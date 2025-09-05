@@ -3,13 +3,30 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eric Wang - Portfolio</title>
+    <title>Redirecting...</title>
     <script type="text/javascript">
-      // Simple redirect to main page for GitHub Pages SPA
-      window.location.href = '/Portfolio-Site/';
+      // GitHub Pages SPA redirect solution
+      // This script takes the current URL and transforms it so the main index.html file is loaded
+      // and the router can handle the route
+      var repo = '/Portfolio-Site/';
+      var l = window.location;
+      
+      // For the root repository path, redirect to index
+      if (l.pathname === repo || l.pathname === repo.slice(0, -1)) {
+        l.replace(repo);
+      } else {
+        // For any other path, redirect to index with the path as a search parameter
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + 
+          repo + '?p=/' + 
+          l.pathname.slice(repo.length).replace(/&/g, '~and~') +
+          (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+        );
+      }
     </script>
   </head>
   <body>
-    <p>Redirecting...</p>
+    <p>Redirecting to portfolio...</p>
   </body>
 </html>
